@@ -1,10 +1,12 @@
 #chatContainer {
-    width: 80vw;
+    width: 100%;
+    max-width: 800px;
     height: 80vh;
     overflow-y: auto;
     padding: 1rem;
     background-color: #f9f9f9;
-}
+  }
+  
 
 .message {
     display: flex;
@@ -43,3 +45,28 @@
     border-radius: 8px;
     border: 1px solid #ccc;
 }
+
+@media only screen and (max-width: 600px) {
+    #chatContainer {
+      height: 70vh;
+    }
+  
+    .message {
+      gap: 5px; 
+      margin: 0.5rem 0;
+    }
+  
+    .userImage, .botImage {
+      width: 30px;
+      height: 30px;
+    }
+  
+    #typeMessageArea {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    #typeMessageArea input {
+      margin-bottom: 5px;
+    }
+  }
